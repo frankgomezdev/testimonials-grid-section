@@ -5,17 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            moderateViolet: "hsl(263, 55%, 52%)",
+            darkGrayishBlue: "hsl(217, 19%, 35%)",
+            darkBlackishBlue: "hsl(219, 29%, 14%)",
+            white: "hsl(0, 0%, 100%)",
+            lightGray: "hsl(0, 0%, 81%)",
+            lightGrayishBlue: "hsl(210, 46%, 95%)",
+          },
+        },
+      },
+    };
+  </script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Testimonials Grid Section</title>
 </head>
-<body class="h-screen flex items-center justify-center">
- <div class="container mx-auto flex flex-wrap max-w-[1110px] max-h-[572px] gap-x-[30px] gap-y-[24px] bg-slate-600">
-  <div class="w-[540px] h-[282px] bg-red-400" >Box1</div>
-  <div class="w-[255px] h-[282px] bg-green-400">Box 2</div>
-  <div class="w-[255px] bg-blue-400">Box 5</div>
-  <div class="w-[540px] h-[266px] bg-yellow-300">Box 3</div>
-  <div class="w-[255px] h-[266px] bg-pink-300">Box 4</div>
- </div>
+<body class="bg-lightGrayishBlue">
+ <main class="h-screen flex items-center justify-center">
+  <div class="container mx-auto grid grid-cols-4 max-w-[1110px] min-h-[572px] gap-x-[30px] gap-y-[24px]">
+    <div class="bg-moderateViolet rounded-lg shadow-xl min-h-[50px] col-span-2">1</div>
+    <div class="bg-darkGrayishBlue rounded-lg shadow-xl min-h-[50px]">2</div>
+    <div class="bg-white rounded-lg shadow-xl min-h-[50px] row-span-2">3</div>
+    <div class="bg-white rounded-lg shadow-xl min-h-[50px]">4</div>
+    <div class="bg-darkBlackishBlue rounded-lg shadow-xl min-h-[50px] col-span-2">5</div>
+  </div>
+ </main>
 </body>
 </html>
