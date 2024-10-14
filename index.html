@@ -17,19 +17,41 @@
             lightGray: "hsl(0, 0%, 81%)",
             lightGrayishBlue: "hsl(210, 46%, 95%)",
           },
+          fontFamily: {
+            'barlow': ['"Barlow Semi Condensed"', 'sans-serif']
+          }
         },
       },
     };
   </script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Testimonials Grid Section</title>
 </head>
 <body class="bg-lightGrayishBlue">
- <main class="h-screen flex items-center justify-center">
+ <main class="h-screen flex items-center justify-center font-barlow">
   <div class="container mx-auto grid grid-cols-4 max-w-[1110px] min-h-[572px] gap-x-[30px] gap-y-[24px]">
-    <div class="bg-moderateViolet rounded-lg shadow-xl min-h-[50px] col-span-2">1</div>
-    <div class="bg-darkGrayishBlue rounded-lg shadow-xl min-h-[50px]">2</div>
+    <div class="bg-moderateViolet rounded-lg shadow-xl max-h-[282px] col-span-2 flex flex-col gap-y-4 pt-[26px] pb-8 px-8 text-white">
+      <div class="flex">
+        <div>
+          <img src="images/image-daniel.jpg" alt="picture of daniel" class="max-h-[36px] max-w-[36px] rounded-full border-2 border-solid border-[#A775F1]"> 
+        </div>
+        <div class="ml-2">
+          <p class="text-[13px]">Daniel Clifford</p>
+          <p class="text-[11px] opacity-50">Verified Graduate</p>
+        </div>
+      </div>
+      <div>
+        <p class="font-semibold text-[20px] leading-6">I received a job offer mid-course, and the subjects I learned were current, if not more so, in the company I joined. I honestly feel I got every penny’s worth.</p>
+      </div>
+      <div>
+        <p class="text-[13px] leading-[1.125rem] opacity-70">“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a transition and have heard some people who had an amazing experience here. I signed up for the free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks was the  best - and most grueling - time of my life. Since completing the course, I’ve  successfully switched careers, working as a Software Engineer at a VR startup. ”</p>
+      </div>
+    </div>
+    <div class="bg-darkGrayishBlue rounded-lg shadow-xl max-h-[282px]">2</div>
     <div class="bg-white rounded-lg shadow-xl min-h-[50px] row-span-2">3</div>
     <div class="bg-white rounded-lg shadow-xl min-h-[50px]">4</div>
     <div class="bg-darkBlackishBlue rounded-lg shadow-xl min-h-[50px] col-span-2">5</div>
